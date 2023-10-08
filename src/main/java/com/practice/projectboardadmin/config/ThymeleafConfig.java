@@ -21,7 +21,7 @@ public class ThymeleafConfig {
         return defaultTemplateResolver;
     }
 
-//testasda
+//test
     @ConfigurationProperties("spring.thymeleaf3")
     public record  Thymeleaf3Properties(boolean decoupledLogic) { }
 
