@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<thlogic>
+    <attr sel="#footer-link" th:href="@{https://github.com/kimDev1242/project-and-admin}" th:text="'게시판 어드민 프로젝트 GitHub'" />
+    <attr sel="#boardPra-link" th:href="@{https://github.com/kimDev1242/project-and-admin/}" th:text="'board'" />
+</thlogic>
