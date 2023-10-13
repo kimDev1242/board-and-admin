@@ -2,7 +2,7 @@ package com.practice.projectboardadmin.config;
 
 import com.practice.projectboardadmin.domain.AdminAccount;
 import com.practice.projectboardadmin.domain.constant.RoleType;
-import com.practice.projectboardadmin.repository.UserAccountRepository;
+import com.practice.projectboardadmin.repository.AdminAccountRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +24,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 @DataJpaTest
 class JpaRepositoryTest {
 
-    private final UserAccountRepository userAccountRepository;
+    private final AdminAccountRepository userAccountRepository;
 
-    public JpaRepositoryTest(@Autowired UserAccountRepository userAccountRepository) {
+    public JpaRepositoryTest(@Autowired AdminAccountRepository userAccountRepository) {
         this.userAccountRepository = userAccountRepository;
     }
 

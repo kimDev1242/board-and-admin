@@ -3,6 +3,7 @@ package com.practice.projectboardadmin.controller;
 import static org.junit.jupiter.api.Assertions.*;
 
 import com.practice.projectboardadmin.config.SecurityConfig;
+import com.practice.projectboardadmin.config.TestSecurityConfig;
 import com.practice.projectboardadmin.domain.constant.RoleType;
 import com.practice.projectboardadmin.dto.ArticleCommentDto;
 import com.practice.projectboardadmin.dto.UserAccountDto;
@@ -27,7 +28,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @DisplayName("컨트롤러 - 댓글 관리")
-@Import(SecurityConfig.class)
+@Import(TestSecurityConfig.class)
 @WebMvcTest(ArticleCommentManagementController.class)
 class ArticleCommentManagementControllerTest {
 
