@@ -1,14 +1,11 @@
-package com.practice.projectboardadmin.dto.response;
-
-import static org.junit.jupiter.api.Assertions.*;
+package com.practice.projectboardadmin.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.practice.projectboardadmin.domain.constant.RoleType;
 import com.practice.projectboardadmin.dto.ArticleDto;
 import com.practice.projectboardadmin.dto.UserAccountDto;
 import com.practice.projectboardadmin.dto.properties.ProjectProperties;
-import com.practice.projectboardadmin.service.ArticleManagementService;
-import org.junit.jupiter.api.Disabled;
+import com.practice.projectboardadmin.dto.response.ArticleClientResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -50,7 +47,7 @@ class ArticleManagementServiceTest {
 
         @DisplayName("게시글 API를 호출하면, 게시글을 가져온다.")
         @Test
-        void given_when_then() {
+        void givenNothing_whenCallingArticleApi_thenReturnsArticleList() {
             // Given
 
             // When

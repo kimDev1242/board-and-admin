@@ -1,23 +1,10 @@
 package com.practice.projectboardadmin.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import com.practice.projectboardadmin.config.SecurityConfig;
 import com.practice.projectboardadmin.domain.constant.RoleType;
 import com.practice.projectboardadmin.dto.ArticleDto;
 import com.practice.projectboardadmin.dto.UserAccountDto;
 import com.practice.projectboardadmin.service.ArticleManagementService;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.context.annotation.Import;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +31,8 @@ class ArticleManagementControllerTest {
 
     private final MockMvc mvc;
 
-    @MockBean private ArticleManagementService articleManagementService;
+    @MockBean
+    private ArticleManagementService articleManagementService;
 
     public ArticleManagementControllerTest(@Autowired MockMvc mvc) {
         this.mvc = mvc;
@@ -127,5 +115,4 @@ class ArticleManagementControllerTest {
                 "test memo"
         );
     }
-
 }
