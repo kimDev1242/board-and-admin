@@ -29,6 +29,7 @@ import static org.springframework.test.web.client.match.MockRestRequestMatchers.
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
+
 @ActiveProfiles("test")
 @DisplayName("비즈니스 로직 - 게시글 관리")
 class ArticleManagementServiceTest {
@@ -171,8 +172,6 @@ class ArticleManagementServiceTest {
         private UserAccountDto createUserAccountDto() {
             return UserAccountDto.of(
                     "unoTest",
-                    "pw",
-                    Set.of(RoleType.ADMIN),
                     "uno-test@email.com",
                     "uno-test",
                     "test memo"
