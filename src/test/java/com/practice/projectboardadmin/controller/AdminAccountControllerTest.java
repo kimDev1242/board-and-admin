@@ -33,7 +33,7 @@ import static org.springframework.security.test.web.servlet.request.SecurityMock
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 
 
-@DisplayName("View 컨트롤러 - 어드민 회원")
+@DisplayName("컨트롤러 - 어드민 회원")
 @Import(TestSecurityConfig.class)
 @WebMvcTest(AdminAccountController.class)
 class AdminAccountControllerTest {
