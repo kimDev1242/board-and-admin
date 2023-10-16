@@ -13,8 +13,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
-import java.util.List;
-
 @RequiredArgsConstructor
 @Service
 public class ArticleManagementService {
@@ -28,6 +26,7 @@ public class ArticleManagementService {
                 .queryParam("size", 10000) // TODO: 전체 게시글을 가져오기 위해 충분히 큰 사이즈를 전달하는 방식. 불완전하다.
                 .build()
                 .toUri();
+
         ArticleClientResponse response = restTemplate.getForObject(uri, ArticleClientResponse.class);
 
         return Optional.ofNullable(response).orElseGet(ArticleClientResponse::empty).articles();
