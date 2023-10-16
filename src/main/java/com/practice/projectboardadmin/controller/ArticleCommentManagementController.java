@@ -17,12 +17,13 @@ public class ArticleCommentManagementController {
 
     private final ArticleCommentManagementService articleCommentManagementService;
 
-    @GetMapping
+    @GetMapping()
     public String articleComments(Model model) {
         model.addAttribute(
                 "comments",
                 articleCommentManagementService.getArticleComments().stream().map(ArticleCommentResponse::of).toList()
         );
+
         return "management/article-comments";
     }
 
@@ -38,4 +39,5 @@ public class ArticleCommentManagementController {
 
         return "redirect:/management/article-comments";
     }
+
 }
