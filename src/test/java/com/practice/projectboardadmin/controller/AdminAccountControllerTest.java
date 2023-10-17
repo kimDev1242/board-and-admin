@@ -1,5 +1,6 @@
 package com.practice.projectboardadmin.controller;
 
+import com.practice.projectboardadmin.config.GlobalControllerConfig;
 import com.practice.projectboardadmin.config.SecurityConfig;
 import com.practice.projectboardadmin.config.TestSecurityConfig;
 import com.practice.projectboardadmin.domain.constant.RoleType;
@@ -32,9 +33,8 @@ import static org.mockito.BDDMockito.*;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 
-
+@Import({SecurityConfig.class, GlobalControllerConfig.class})
 @DisplayName("컨트롤러 - 어드민 회원")
-@Import(TestSecurityConfig.class)
 @WebMvcTest(AdminAccountController.class)
 class AdminAccountControllerTest {
 
